@@ -4,7 +4,7 @@ Wanna send your cron emails to telegram? I gotchu.
 
 # Usage
 
-Either use it as MTA in your cron daemon (you can in cronie), or put some shell script to `/bin/sendmail` (or whatever
+Either use it as MTA in your cron daemon (you can in cronie), or put some shell script to `/usr/sbin/sendmail` (or whatever
 your cron daemon uses) which runs `sendtg --telegram <chat_id>@<bot_token>`.
 
     Usage: sendtg [OPTIONS]
@@ -14,3 +14,9 @@ your cron daemon uses) which runs `sendtg --telegram <chat_id>@<bot_token>`.
       -s, --sendmail <SENDMAIL>  MTA to use for emails [default: sendmail]
       -h, --help                 Print help
       -V, --version              Print version
+
+See example `sendmail` script. Find where your system expects to find it: `cat /usr/include/paths.h | grep SENDMAIL`.
+
+# TODO
+
+  - attachments

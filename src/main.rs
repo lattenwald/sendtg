@@ -53,6 +53,7 @@ fn to_sendmail(mta_command: &str, buf: &[u8]) {
         .expect("Failed writing message to sendmail");
 }
 
+// TODO: attachments
 fn to_telegram(tg_address: &str, message: Message) {
     let to = format_address(message.to());
     let from = format_address(message.from());
